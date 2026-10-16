@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: The SuperiorOS Project
+SPDX-License-Identifier: Apache-2.0
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="28dp" />
+    <solid android:color="@color/lab_card_toggles_bg" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/lab_card_toggles_stroke" />
+</shape>

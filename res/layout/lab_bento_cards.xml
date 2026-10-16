@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: The SuperiorOS Project
+SPDX-License-Identifier: Apache-2.0
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lab_bento_grid_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="9dp"
+    android:paddingEnd="9dp"
+    android:paddingBottom="28dp">
+
+    <!-- ROW 1 (1.22 : 1): Status Bar & Notifications -->
+    <LinearLayout
+        android:id="@+id/row_statusbar_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Card 1: Status Bar -->
+        <FrameLayout
+            android:id="@+id/card_statusbar"
+            style="@style/LabBentoCard"
+            android:layout_weight="1.22"
+            android:backgroundTint="@color/lab_card_statusbar">
+
+            <ImageView
+                style="@style/LabWatermarkIcon"
+                android:layout_marginEnd="46dp"
+                android:src="@drawable/ic_settings_statusbar"
+                android:tint="@color/lab_text_statusbar" />
+
+            <LinearLayout style="@style/LabCardContent">
+                <FrameLayout
+                    style="@style/LabSquircleContainer"
+                    android:backgroundTint="@color/lab_icon_statusbar">
+                    <ImageView
+                        style="@style/LabSquircleIcon"
+                        android:src="@drawable/ic_settings_statusbar" />
+                </FrameLayout>
+
+                <Space style="@style/LabCardSpacer" />
+
+                <TextView
+                    style="@style/LabCardTitle"
+                    android:text="@string/statusbar_title"
+                    android:textColor="@color/lab_text_statusbar" />
+
+                <TextView
+                    android:id="@+id/summary_statusbar"
+                    style="@style/LabCardSummary"
+                    android:text="@string/lab_statusbar_desc"
+                    android:textColor="@color/lab_text_statusbar" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Card 2: Notifications -->
+        <FrameLayout
+            android:id="@+id/card_notifications"
+            style="@style/LabBentoCard"
+            android:layout_weight="1"
+            android:backgroundTint="@color/lab_card_notifications">
+
+            <ImageView
+                style="@style/LabWatermarkIcon"
+                android:layout_marginEnd="42dp"
+                android:src="@drawable/ic_settings_notifications"
+                android:tint="@color/lab_text_notifications" />
+
+            <LinearLayout style="@style/LabCardContent">
+                <FrameLayout
+                    style="@style/LabSquircleContainer"
+                    android:backgroundTint="@color/lab_icon_notifications">
+                    <ImageView
+                        style="@style/LabSquircleIcon"
+                        android:src="@drawable/ic_settings_notifications" />
+                </FrameLayout>
+
+                <Space style="@style/LabCardSpacer" />
+
+                <TextView
+                    style="@style/LabCardTitle"
+                    android:text="@string/notifications_title"
+                    android:textColor="@color/lab_text_notifications" />
+
+                <TextView
+                    android:id="@+id/summary_notifications"
+                    style="@style/LabCardSummary"
+                    android:text="@string/lab_notifications_desc"
+                    android:textColor="@color/lab_text_notifications" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ROW 2 (1 : 1.22): Lock Screen & Power Menu -->
+    <LinearLayout
+        android:id="@+id/row_lockscreen_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Card 3: Lock Screen -->
+        <FrameLayout
+            android:id="@+id/card_lockscreen"
+            style="@style/LabBentoCard"
+            android:layout_weight="1"
+            android:backgroundTint="@color/lab_card_lockscreen">
+
+            <ImageView
+                style="@style/LabWatermarkIcon"
+                android:layout_marginEnd="42dp"
+                android:src="@drawable/ic_settings_lockscreens"
+                android:tint="@color/lab_text_lockscreen" />
+
+            <LinearLayout style="@style/LabCardContent">
+                <FrameLayout
+                    style="@style/LabSquircleContainer"
+                    android:backgroundTint="@color/lab_icon_lockscreen">
+                    <ImageView
+                        style="@style/LabSquircleIcon"
+                        android:src="@drawable/ic_settings_lockscreens" />
+                </FrameLayout>
+
+                <Space style="@style/LabCardSpacer" />
+
+                <TextView
+                    style="@style/LabCardTitle"
+                    android:text="@string/lockscreen_title"
+                    android:textColor="@color/lab_text_lockscreen" />
+
+                <TextView
+                    android:id="@+id/summary_lockscreen"
+                    style="@style/LabCardSummary"
+                    android:text="@string/lab_lockscreen_desc"
+                    android:textColor="@color/lab_text_lockscreen" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Card 4: Power Menu -->
+        <FrameLayout
+            android:id="@+id/card_powermenu"
+            style="@style/LabBentoCard"
+            android:layout_weight="1.22"
+            android:backgroundTint="@color/lab_card_powermenu">
+
+            <ImageView
+                style="@style/LabWatermarkIcon"
+                android:layout_marginEnd="46dp"
+                android:src="@drawable/ic_settings_powermenu"
+                android:tint="@color/lab_text_powermenu" />
+
+            <LinearLayout style="@style/LabCardContent">
+                <FrameLayout
+                    style="@style/LabSquircleContainer"
+                    android:backgroundTint="@color/lab_icon_powermenu">
+                    <ImageView
+                        style="@style/LabSquircleIcon"
+                        android:src="@drawable/ic_settings_powermenu" />
+                </FrameLayout>
+
+                <Space style="@style/LabCardSpacer" />
+
+                <TextView
+                    style="@style/LabCardTitle"
+                    android:text="@string/powermenu_title"
+                    android:textColor="@color/lab_text_powermenu" />
+
+                <TextView
+                    android:id="@+id/summary_powermenu"
+                    style="@style/LabCardSummary"
+                    android:text="@string/lab_powermenu_desc"
+                    android:textColor="@color/lab_text_powermenu" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ROW 3 (1.15 : 1): Buttons & Gestures -->
+    <LinearLayout
+        android:id="@+id/row_buttons_gestures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Card 5: Buttons -->
+        <FrameLayout
+            android:id="@+id/card_buttons"
+            style="@style/LabBentoCard"
+            android:layout_weight="1.15"
+            android:backgroundTint="@color/lab_card_buttons">
+
+            <ImageView
+                style="@style/LabWatermarkIcon"
+                android:layout_marginEnd="46dp"
+                android:src="@drawable/ic_settings_buttons"
+                android:tint="@color/lab_text_buttons" />
+
+            <LinearLayout style="@style/LabCardContent">
+                <FrameLayout
+                    style="@style/LabSquircleContainer"
+                    android:backgroundTint="@color/lab_icon_buttons">
+                    <ImageView
+                        style="@style/LabSquircleIcon"
+                        android:src="@drawable/ic_settings_buttons" />
+                </FrameLayout>
+
+                <Space style="@style/LabCardSpacer" />
+
+                <TextView
+                    style="@style/LabCardTitle"
+                    android:text="@string/button_title"
+                    android:textColor="@color/lab_text_buttons" />
+
+                <TextView
+                    style="@style/LabCardSummary"
+                    android:text="@string/lab_buttons_desc"
+                    android:textColor="@color/lab_text_buttons" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Card 6: Gestures -->
+        <FrameLayout
+            android:id="@+id/card_gestures"
+            style="@style/LabBentoCard"
+            android:layout_weight="1"
+            android:backgroundTint="@color/lab_card_gestures">
+
+            <ImageView
+                style="@style/LabWatermarkIcon"
+                android:layout_marginEnd="42dp"
+                android:src="@drawable/ic_settings_sos_gestures"
+                android:tint="@color/lab_text_gestures" />
+
+            <LinearLayout style="@style/LabCardContent">
+                <FrameLayout
+                    style="@style/LabSquircleContainer"
+                    android:backgroundTint="@color/lab_icon_gestures">
+                    <ImageView
+                        style="@style/LabSquircleIcon"
+                        android:src="@drawable/ic_settings_sos_gestures" />
+                </FrameLayout>
+
+                <Space style="@style/LabCardSpacer" />
+
+                <TextView
+                    style="@style/LabCardTitle"
+                    android:text="@string/gestures_title"
+                    android:textColor="@color/lab_text_gestures" />
+
+                <TextView
+                    style="@style/LabCardSummary"
+                    android:text="@string/lab_gestures_desc"
+                    android:textColor="@color/lab_text_gestures" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ROW 4: Card 7 - Wide Featured Card for Misc & Spoofing -->
+    <LinearLayout
+        android:id="@+id/card_misc"
+        style="@style/LabWideCard"
+        android:layout_marginTop="6dp"
+        android:minHeight="92dp"
+        android:backgroundTint="@color/lab_card_misc">
+
+        <FrameLayout
+            style="@style/LabSquircleContainer"
+            android:backgroundTint="@color/lab_icon_misc">
+            <ImageView
+                style="@style/LabSquircleIcon"
+                android:src="@drawable/ic_settings_miscs" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabCardTitle"
+                android:text="@string/misc_title"
+                android:textColor="@color/lab_text_misc" />
+            <TextView
+                android:id="@+id/summary_misc"
+                style="@style/LabCardSummary"
+                android:text="@string/lab_misc_desc"
+                android:textColor="@color/lab_text_misc" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lab_pif_badge"
+            style="@style/LabPifBadge"
+            android:text="@string/lab_chip_pif" />
+    </LinearLayout>
+
+    <!-- ROW 5: Card 8 - Wide Featured Card for Superior Team -->
+    <LinearLayout
+        android:id="@+id/card_team"
+        style="@style/LabWideCard"
+        android:layout_marginTop="6dp"
+        android:minHeight="82dp"
+        android:backgroundTint="@color/lab_card_team">
+
+        <FrameLayout
+            style="@style/LabSquircleContainer"
+            android:backgroundTint="@color/lab_icon_team">
+            <ImageView
+                style="@style/LabSquircleIcon"
+                android:src="@drawable/ic_settings_team" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+            <TextView
+                style="@style/LabCardTitle"
+                android:text="@string/team_title"
+                android:textColor="@color/lab_text_team" />
+            <TextView
+                style="@style/LabCardSummary"
+                android:text="@string/lab_team_desc"
+                android:textColor="@color/lab_text_team"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

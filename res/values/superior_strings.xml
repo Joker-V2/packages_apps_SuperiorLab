@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2022 SuperiorOS
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+<!--
+SPDX-FileCopyrightText: The SuperiorOS Project
+SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- App Title -->
     <string name="superior_lab_title">Superior Lab</string>
@@ -46,25 +36,53 @@
     <string name="superior_lab_team">Team SuperiorOS</string>
 
     <!-- Categories -->
-    <string name="team_title">About Team</string>
-    <string name="team_summary">Core team, Honorable mentions</string>
+    <string name="team_title">Superior Team</string>
     <string name="button_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
     <string name="lockscreen_title">Lock screen</string>
-    <string name="misc_title">Miscellaneous</string>
+    <string name="misc_title">Misc &amp; Spoofing</string>
     <string name="navbar_title">Navigation bar</string>
     <string name="powermenu_title">Power menu</string>
-    <string name="quicksettings_title">Quick Settings</string>
-    <string name="themes_title">Themes</string>
     <string name="statusbar_title">Status bar</string>
     <string name="notifications_title">Notifications</string>
     <string name="spoofing_title">Spoofing</string>
 
     <!-- General strings -->
-    <string name="ok">OK</string>
+    <string name="lab_chip_pif">Dynamic PIF</string>
+    <string name="lab_chip_custom_pif">Custom PIF</string>
+    <string name="lab_chip_keybox_only">Keybox Active</string>
+    <string name="lab_chip_keybox_pif">Keybox + PIF</string>
+    <string name="lab_quick_secure_on">Ignore Secure</string>
+    <string name="lab_quick_secure_off">Ignore Secure</string>
+    <string name="lab_quick_capture_on">Hide Capture</string>
+    <string name="lab_quick_capture_off">Hide Capture</string>
+    <string name="lab_quick_headsup_on">Heads-Up</string>
+    <string name="lab_quick_headsup_off">Heads-Up</string>
+    <string name="lab_quick_pulse_on">Pulse Bars</string>
+    <string name="lab_quick_pulse_off">Pulse Bars</string>
+    <string name="lab_statusbar_desc">Icons, traffic &amp; clock</string>
+    <string name="lab_statusbar_live_traffic">Network traffic active</string>
+    <string name="lab_statusbar_live_traffic_sec">Traffic monitor &amp; clock seconds</string>
+    <string name="lab_lockscreen_desc">Ripple &amp; visualizer</string>
+    <string name="lab_lockscreen_live_pulse_art">Pulse &amp; media art active</string>
+    <string name="lab_lockscreen_live_pulse">Pulse visualizer active</string>
+    <string name="lab_lockscreen_live_ripple">Fingerprint ripple enabled</string>
+    <string name="lab_buttons_desc">Hardware keys &amp; taskbar</string>
+    <string name="lab_gestures_desc">AOSP navigation gestures</string>
+    <string name="lab_powermenu_desc">Advanced restart options</string>
+    <string name="lab_powermenu_live_adv_on">Advanced restart enabled</string>
+    <string name="lab_notifications_desc">Heads-up &amp; alert filters</string>
+    <string name="lab_notifications_live_on">Heads-up alerts active</string>
+    <string name="lab_notifications_live_less_boring">Less boring heads-up active</string>
+    <string name="lab_notifications_live_off">Heads-up alerts muted</string>
+    <string name="lab_misc_desc">Play Integrity &amp; Keybox attestation</string>
+    <string name="lab_misc_live_privacy_both">Secure &amp; capture flags bypassed</string>
+    <string name="lab_misc_live_secure_ignored">Window secure flags bypassed</string>
+    <string name="lab_misc_live_capture_hidden">Screen capture status hidden</string>
+    <string name="lab_team_desc">Core developers &amp; telegram community</string>
+    
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
-    <string name="save">Save</string>
     <string name="general_category">General</string>
 
     <!-- AOSP Gestures -->
@@ -95,8 +113,6 @@
     <string name="pif_data_summary">Select PIF JSON used for prop attestation spoofing for google mobile services. Click the delete button in order to reset the PIF data props and use dynamic PIF props which are used by default.</string>
 
     <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_icons_category">Icons</string>
     <string name="status_bar_gestures_category">Gestures</string>
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
@@ -105,52 +121,32 @@
     <string name="status_bar_quick_qs_pulldown_off">Off</string>
     <string name="status_bar_quick_qs_pulldown_left">Left</string>
     <string name="status_bar_quick_qs_pulldown_right">Right</string>
-    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="status_bar_double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
-
-    <!-- Status bar - icons -->
-    <string name="status_bar_icons_title">Status bar icons</string>
-    <string name="status_bar_system_icons_title">System icons</string>
-    <string name="status_bar_system_icons_summary">Control which status bar icons are shown</string>
-
-    <!-- Status bar - Clock -->
     <string name="status_bar_clock_title">Clock</string>
-
     <string name="status_bar_clock_show_seconds_title">Show seconds</string>
     <string name="status_bar_clock_show_seconds_summary">Show hours, minutes, and seconds</string>
-
     <string name="status_bar_clock_auto_hide_title">Auto hide</string>
     <string name="status_bar_clock_auto_hide_summary">Hide clock if launcher is visible</string>
-
     <string name="status_bar_clock_position_title">Clock position</string>
     <string name="status_bar_clock_position_right">Right</string>
     <string name="status_bar_clock_position_left">Left</string>
     <string name="status_bar_clock_position_center">Center</string>
-
     <string name="status_bar_am_pm_title">AM/PM style</string>
     <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
     <string name="status_bar_am_pm_normal">Normal</string>
     <string name="status_bar_am_pm_small">Small</string>
     <string name="status_bar_am_pm_hidden">Hidden</string>
-
-    <!-- Status bar - Battery -->
     <string name="status_bar_battery_title">Battery indicator</string>
     <string name="status_bar_battery_style_title">Battery status style</string>
     <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
     <string name="status_bar_battery_style_circle">Circle</string>
     <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
     <string name="status_bar_battery_style_text">Text</string>
-
-    <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Battery percentage</string>
     <string name="status_bar_battery_percentage_default">Hidden</string>
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
-
-    <!-- Status bar - Brightness -->
     <string name="status_bar_brightness_category">Brightness</string>
     <string name="status_bar_brightness_slider_title">Brightness slider</string>
-    <string name="status_bar_brightness_slider_summary">Adjust brightness from the Quick Settings</string>
     <string name="status_bar_brightness_slider_auto_title">Auto brightness</string>
     <string name="status_bar_brightness_slider_auto_summary">Show toggle for adaptive brightness near the slider</string>
     <string name="status_bar_brightness_slider_show_never">Never show</string>
@@ -159,8 +155,6 @@
     <string name="status_bar_brightness_slider_position_title">Brightness slider position</string>
     <string name="status_bar_brightness_slider_position_top">Top</string>
     <string name="status_bar_brightness_slider_position_bottom">Bottom</string>
-
-    <!-- Status bar - Network Traffic -->
     <string name="network_traffic_settings_title">Network traffic monitor</string>
     <string name="network_traffic_settings_summary">Show current network traffic levels in the status bar</string>
     <string name="network_traffic_mode_title">Display mode</string>
@@ -183,18 +177,9 @@
     <string name="network_traffic_show_units_off">Off</string>
     <string name="network_traffic_show_units_on">On</string>
     <string name="network_traffic_show_units_compact">Compact</string>
-    <string name="network_traffic_show_units_summary">Whether to show traffic measurement units in the statusbar</string>
-    <string name="network_traffic_disabled_clock">Network traffic disabled due to clock position</string>
-
-   <!-- General -->
     <string name="advanced">Advanced</string>
     <string name="enable">Enable</string>
     <string name="disable">Disable</string>
-
-    <!-- Units -->
-    <string name="unit_milliseconds">milliseconds</string>
-    <string name="unit_pixels" translatable="false">dp</string>
-    <string name="unit_seconds">seconds</string>
 
     <!-- Button settings -->
     <string name="hardware_keys_power_key_title">Power button</string>
@@ -245,8 +230,6 @@
     <string name="additional_buttons_title">Additional buttons</string>
     <string name="click_partial_screenshot_title">Click to partial screenshot</string>
     <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
-
-    <!-- Key backlight -->
     <string name="button_backlight_title">Backlight</string>
     <string name="button_backlight_enabled">Illuminate buttons</string>
     <string name="button_backlight_only_when_pressed_title">Illuminate buttons only when pressed</string>
@@ -256,14 +239,10 @@
     <string name="backlight_timeout_title">Illumination timeout</string>
     <string name="backlight_timeout_unlimited">Don\'t turn off</string>
     <string name="backlight_summary_disabled">Disabled</string>
-    <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled_with_timeout">Enabled for <ns0:g id="timeout">%s</ns0:g></string>
     <string name="backlight_summary_enabled">Enabled</string>
-
-    <!-- Buttons - Enable navbar -->
     <string name="disable_navkeys_title">Enable on-screen nav bar</string>
     <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
-
-    <!-- Buttons - Swap capacitive keys -->
     <string name="swap_capacitive_keys_title">Swap capacitive buttons</string>
     <string name="swap_capacitive_keys_summary">Swap the order of recents and back buttons</string>
 
@@ -272,7 +251,6 @@
     <string name="navigation_bar_enable_taskbar_title">Enable taskbar</string>
     <string name="navigation_bar_invert_layout_title">Invert layout</string>
     <string name="navigation_bar_invert_layout_summary">Inverts the layout of the navigation bar</string>
-    <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
     <string name="navigation_bar_back_long_press_title">Back long press action</string>
     <string name="navigation_bar_home_long_press_title">Home long press action</string>
     <string name="navigation_bar_home_double_tap_title">Home double tap action</string>
@@ -294,10 +272,6 @@
     <string name="power_menu_advanced_restart_title">Advanced restart</string>
     <string name="power_menu_advanced_restart_summary">When unlocked, include options in the power menu for restarting into recovery or bootloader</string>
     <string name="power_menu_emergency_affordance_enabled">Emergency affordance is enabled</string>
-    <string name="camera_double_tap_power_gesture_title">Press power button twice for camera</string>
-
-    <!-- Description of setting that controls gesture to open camera by double tapping the power button [CHAR LIMIT=NONE] -->
-    <string name="camera_double_tap_power_gesture_desc">Quickly open camera without unlocking your screen</string>
     <string name="torch_long_press_power_gesture_title">Long press for torch</string>
     <string name="torch_long_press_power_gesture_desc">Activate the torch by long pressing the power button while the display is off</string>
     <string name="torch_long_press_power_timeout_title">Automatically turn torch off</string>
@@ -307,18 +281,12 @@
     <string name="torch_long_press_power_timeout_5min">5 minutes</string>
     <string name="torch_long_press_power_timeout_10min">10 minutes</string>
 
-    <!-- Ripple effect on unlock -->
+    <!-- Lockscreen category -->
     <string name="lock_screen_fingerprint_ripple_title">Ripple animation</string>
     <string name="lock_screen_fingerprint_ripple_summary">Show ripple animation when unlocked with fingerprint</string>
-
-    <!-- Lockscreen category -->
     <string name="lock_screen_interface_category">Interface</string>
-
-    <!-- Lock screen media art -->
     <string name="ls_media_art_title">Media cover art</string>
     <string name="ls_media_art_summary">Display media cover art when available</string>
-
-    <!-- Lock screen album art filter -->
     <string name="ls_media_art_filter_title">Media cover art filter</string>
     <string name="ls_media_art_filter_none">None</string>
     <string name="ls_media_art_filter_blur">Blur</string>
@@ -327,16 +295,10 @@
     <string name="ls_media_art_filter_tint">Accent tinted</string>
     <string name="ls_media_art_filter_invert">Invert</string>
     <string name="ls_media_art_filter_grayblur">Grayscale and blur</string>
-
-    <!-- Lock screen media art fade level -->
     <string name="ls_media_art_fade_level_title">Media cover art fade level</string>
     <string name="ls_media_art_fade_level_summary">Set media cover art fade level</string>
-    
-    <!-- Lock screen media art blur level -->
     <string name="ls_media_art_blur_level_title">Media art blur level</string>
     <string name="ls_media_art_blur_level_summary">Blur intensity when blur filter is applied</string>
-
-    <!-- Pulse music visualizer -->
     <string name="pulse_settings_title">Pulse Visualizer</string>
     <string name="pulse_settings_summary">Show a bar visualizer on the lock screen while music is playing</string>
     <string name="pulse_rounded_bars_title">Rounded bars</string>
@@ -348,11 +310,8 @@
     <string name="pulse_color_lavalamp">Lavalamp</string>
     <string name="pulse_color_album">Album art</string>
     <string name="pulse_color_accent">Accent color</string>
-
-    <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_enable_power_menu_title">Power menu</string>
     <string name="lockscreen_enable_power_menu_summary">Allow accessing power menu on secure lockscreen</string>
-
     <string name="lockscreen_quick_setting_summary">Swipe down on Lock screen to view Quick Settings</string>
     <string name="lockscreen_quick_setting_title">Quick Settings</string>
 
@@ -360,11 +319,9 @@
     <string name="heads_up_notifications_enabled_title">Heads-up</string>
     <string name="heads_up_notifications_enabled_summary">Display priority notifications in a small floating window</string>
 
-    <!-- Notifications/Less boring heads up -->
+    <!-- Notifications -->
     <string name="notifications_less_boring_heads_up_title">Less boring</string>
     <string name="notifications_less_boring_heads_up_summary">Display popup notifications only for alarm, dialer and messaging app</string>
-
-    <!-- Annoying Notifications -->
     <string name="notification_sound_vib_screen_on_title">Annoying Notifications</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
 

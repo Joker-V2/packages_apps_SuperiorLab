@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: The SuperiorOS Project
+SPDX-License-Identifier: Apache-2.0
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lab_tags_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_lab_card_toggles_container"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_marginStart="9dp"
+    android:layout_marginEnd="9dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    android:padding="16dp">
+
+    <!-- Section Header inside the card -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick Controls"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="11.5sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:textAllCaps="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="4dp" />
+
+    <!-- Row 1: Ignore Secure & Hide Capture -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Pill 1: Ignore Secure -->
+        <LinearLayout
+            android:id="@+id/toggle_secure_window"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_lab_tag_pill_unselected"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="11dp"
+            android:paddingEnd="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:id="@+id/icon_box_secure_window"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_lab_tag_icon_box">
+
+                <ImageView
+                    android:id="@+id/icon_secure_window"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lab_qs_secure"
+                    android:tint="@color/lab_tag_text_unselected"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/label_secure_window"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/lab_quick_secure_off"
+                android:textColor="@color/lab_tag_text_unselected"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:id="@+id/dot_secure_window"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_lab_dot_off"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <!-- Pill 2: Hide Capture -->
+        <LinearLayout
+            android:id="@+id/toggle_hide_capture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_lab_tag_pill_unselected"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="11dp"
+            android:paddingEnd="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:id="@+id/icon_box_hide_capture"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_lab_tag_icon_box">
+
+                <ImageView
+                    android:id="@+id/icon_hide_capture"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lab_qs_capture"
+                    android:tint="@color/lab_tag_text_unselected"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/label_hide_capture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/lab_quick_capture_off"
+                android:textColor="@color/lab_tag_text_unselected"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:id="@+id/dot_hide_capture"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_lab_dot_off"
+                android:contentDescription="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Row 2: Heads-Up & Pulse Bars -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Pill 3: Heads-Up -->
+        <LinearLayout
+            android:id="@+id/toggle_heads_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_lab_tag_pill_unselected"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="11dp"
+            android:paddingEnd="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:id="@+id/icon_box_heads_up"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_lab_tag_icon_box">
+
+                <ImageView
+                    android:id="@+id/icon_heads_up"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lab_qs_headsup"
+                    android:tint="@color/lab_tag_text_unselected"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/label_heads_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/lab_quick_headsup_off"
+                android:textColor="@color/lab_tag_text_unselected"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:id="@+id/dot_heads_up"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_lab_dot_off"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <!-- Pill 4: Pulse Bars -->
+        <LinearLayout
+            android:id="@+id/toggle_pulse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_lab_tag_pill_unselected"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="11dp"
+            android:paddingEnd="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <FrameLayout
+                android:id="@+id/icon_box_pulse"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_lab_tag_icon_box">
+
+                <ImageView
+                    android:id="@+id/icon_pulse"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lab_qs_pulse"
+                    android:tint="@color/lab_tag_text_unselected"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/label_pulse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/lab_quick_pulse_off"
+                android:textColor="@color/lab_tag_text_unselected"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:id="@+id/dot_pulse"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic_lab_dot_off"
+                android:contentDescription="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: The SuperiorOS Project
+SPDX-License-Identifier: Apache-2.0
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lab_dashboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <!-- 1. M3 Expressive 2x2 Quick Toggles Dock -->
+    <include layout="@layout/lab_scrollable_tags" />
+
+    <!-- 2. M3 Expressive Watermarked Bento Grid -->
+    <include layout="@layout/lab_bento_cards" />
+
+</LinearLayout>
