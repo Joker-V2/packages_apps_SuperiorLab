@@ -1,22 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2018-19 The Superior OS Project
-
+     Copyright (C) 2018-26 The SuperiorOS Project
      Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
 -->
-<resources
-    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+<resources xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
 
-     <!-- Dashboard/homepage icon background colors -->
-     <color name="homepage_subicon_bg">#FFFFFF</color>
+    <color name="homepage_subicon_bg">#FFFFFF</color>
+
+    <!-- Fallback Text Colors -->
+    <color name="lab_text_primary">#ECEEF4</color>
+    <color name="lab_text_secondary">#9DA4B4</color>
+
+    <!-- Solid Emerald PIF Pill with White Text (Matches Screenshot) -->
+    <color name="lab_chip_pif_bg">#16A34A</color>
+    <color name="lab_chip_pif_text">#FFFFFF</color>
+
+    <!-- Quick Toggles Dock -->
+    <color name="lab_tag_bg_selected_start">#0066FF</color>
+    <color name="lab_tag_bg_selected_end">#0066FF</color>
+    <color name="lab_tag_bg_unselected">#171B24</color>
+    <color name="lab_tag_stroke_unselected">#232938</color>
+    <color name="lab_tag_text_selected">#FFFFFF</color>
+    <color name="lab_tag_text_unselected">#9DA4B4</color>
+
+    <!-- M3 Expressive Card Surfaces (Dark Mode) -->
+    <color name="lab_card_statusbar">#0C233B</color>
+    <color name="lab_card_notifications">#361419</color>
+    <color name="lab_card_lockscreen">#2A143B</color>
+    <color name="lab_card_powermenu">#381C0E</color>
+    <color name="lab_card_buttons">#33260B</color>
+    <color name="lab_card_gestures">#0A2E29</color>
+    <color name="lab_card_misc">#0E2B1C</color>
+    <color name="lab_card_team">#1D173B</color>
+
+    <!-- M3 Expressive Tonal Typography Colors (Dark Mode) -->
+    <color name="lab_text_statusbar">#B8E2FF</color>
+    <color name="lab_text_notifications">#FFD9DC</color>
+    <color name="lab_text_lockscreen">#F4D9FF</color>
+    <color name="lab_text_powermenu">#FFDEC9</color>
+    <color name="lab_text_buttons">#FFEAB8</color>
+    <color name="lab_text_gestures">#B2FFF1</color>
+    <color name="lab_text_misc">#C4FCD9</color>
+    <color name="lab_text_team">#E2D9FF</color>
+
+    <!-- Squircle Icon Backgrounds (Dark Mode) -->
+    <color name="lab_icon_statusbar">#0088FF</color>
+    <color name="lab_icon_notifications">#FF4444</color>
+    <color name="lab_icon_lockscreen">#AA2FF0</color>
+    <color name="lab_icon_powermenu">#FF6D00</color>
+    <color name="lab_icon_buttons">#FFB300</color>
+    <color name="lab_icon_gestures">#00BFA5</color>
+    <color name="lab_icon_misc">#22C55E</color>
+    <color name="lab_icon_team">#7C3AED</color>
+
+    <!-- Icon Tints (Dark Icons on Yellow, Teal & Green Squircles as in Screenshot) -->
+    <color name="lab_icon_tint_statusbar">#FFFFFF</color>
+    <color name="lab_icon_tint_notifications">#FFFFFF</color>
+    <color name="lab_icon_tint_lockscreen">#FFFFFF</color>
+    <color name="lab_icon_tint_powermenu">#FFFFFF</color>
+    <color name="lab_icon_tint_buttons">#FFFFFF</color>
+    <color name="lab_icon_tint_gestures">#FFFFFF</color>
+    <color name="lab_icon_tint_misc">#FFFFFF</color>
+    <color name="lab_icon_tint_team">#FFFFFF</color>
+
 </resources>

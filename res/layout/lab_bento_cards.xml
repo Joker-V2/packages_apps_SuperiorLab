@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 SuperiorOS -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lab_bento_grid_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="9dp"
+    android:paddingEnd="9dp"
+    android:paddingBottom="28dp">
+
+    <!-- ROW 1 (1.22 : 1): Status Bar & Notifications -->
+    <LinearLayout
+        android:id="@+id/row_statusbar_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Card 1: Status Bar -->
+        <FrameLayout
+            android:id="@+id/card_statusbar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.22"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_lab_card_statusbar"
+            android:minHeight="148dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="46dp"
+                android:layout_marginBottom="52dp"
+                android:src="@drawable/ic_settings_statusbar"
+                android:tint="@color/lab_text_statusbar"
+                android:alpha="0.10"
+                android:rotation="-12"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_lab_sq_icon_statusbar">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings_statusbar"
+                        android:tint="@color/lab_icon_tint_statusbar"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statusbar_title"
+                    android:textColor="@color/lab_text_statusbar"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/summary_statusbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lab_statusbar_desc"
+                    android:textColor="@color/lab_text_statusbar"
+                    android:alpha="0.78"
+                    android:textSize="11.5sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Card 2: Notifications -->
+        <FrameLayout
+            android:id="@+id/card_notifications"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_lab_card_notifications"
+            android:minHeight="148dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="52dp"
+                android:src="@drawable/ic_settings_notifications"
+                android:tint="@color/lab_text_notifications"
+                android:alpha="0.10"
+                android:rotation="-12"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_lab_sq_icon_notifications">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings_notifications"
+                        android:tint="@color/lab_icon_tint_notifications"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notifications_title"
+                    android:textColor="@color/lab_text_notifications"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/summary_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lab_notifications_desc"
+                    android:textColor="@color/lab_text_notifications"
+                    android:alpha="0.78"
+                    android:textSize="11.5sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ROW 2 (1 : 1.22): Lock Screen & Power Menu -->
+    <LinearLayout
+        android:id="@+id/row_lockscreen_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Card 3: Lock Screen -->
+        <FrameLayout
+            android:id="@+id/card_lockscreen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_lab_card_lockscreen"
+            android:minHeight="148dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="52dp"
+                android:src="@drawable/ic_settings_lockscreens"
+                android:tint="@color/lab_text_lockscreen"
+                android:alpha="0.10"
+                android:rotation="-12"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_lab_sq_icon_lockscreen">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings_lockscreens"
+                        android:tint="@color/lab_icon_tint_lockscreen"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lockscreen_title"
+                    android:textColor="@color/lab_text_lockscreen"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/summary_lockscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lab_lockscreen_desc"
+                    android:textColor="@color/lab_text_lockscreen"
+                    android:alpha="0.78"
+                    android:textSize="11.5sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Card 4: Power Menu -->
+        <FrameLayout
+            android:id="@+id/card_powermenu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.22"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_lab_card_powermenu"
+            android:minHeight="148dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="46dp"
+                android:layout_marginBottom="52dp"
+                android:src="@drawable/ic_settings_powermenu"
+                android:tint="@color/lab_text_powermenu"
+                android:alpha="0.10"
+                android:rotation="-12"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_lab_sq_icon_powermenu">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings_powermenu"
+                        android:tint="@color/lab_icon_tint_powermenu"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/powermenu_title"
+                    android:textColor="@color/lab_text_powermenu"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/summary_powermenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lab_powermenu_desc"
+                    android:textColor="@color/lab_text_powermenu"
+                    android:alpha="0.78"
+                    android:textSize="11.5sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ROW 3 (1.15 : 1): Buttons & Gestures -->
+    <LinearLayout
+        android:id="@+id/row_buttons_gestures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Card 5: Buttons -->
+        <FrameLayout
+            android:id="@+id/card_buttons"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.15"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_lab_card_buttons"
+            android:minHeight="148dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="46dp"
+                android:layout_marginBottom="52dp"
+                android:src="@drawable/ic_settings_buttons"
+                android:tint="@color/lab_text_buttons"
+                android:alpha="0.10"
+                android:rotation="-12"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_lab_sq_icon_buttons">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings_buttons"
+                        android:tint="@color/lab_icon_tint_buttons"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_title"
+                    android:textColor="@color/lab_text_buttons"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lab_buttons_desc"
+                    android:textColor="@color/lab_text_buttons"
+                    android:alpha="0.78"
+                    android:textSize="11.5sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Card 6: Gestures -->
+        <FrameLayout
+            android:id="@+id/card_gestures"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_lab_card_gestures"
+            android:minHeight="148dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="52dp"
+                android:src="@drawable/ic_settings_sos_gestures"
+                android:tint="@color/lab_text_gestures"
+                android:alpha="0.10"
+                android:rotation="-12"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_lab_sq_icon_gestures">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings_sos_gestures"
+                        android:tint="@color/lab_icon_tint_gestures"
+                        android:contentDescription="@null" />
+                </FrameLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:minHeight="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gestures_title"
+                    android:textColor="@color/lab_text_gestures"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lab_gestures_desc"
+                    android:textColor="@color/lab_text_gestures"
+                    android:alpha="0.78"
+                    android:textSize="11.5sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ROW 4: Card 7 - Wide Featured Card for Misc & Spoofing -->
+    <LinearLayout
+        android:id="@+id/card_misc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_lab_card_misc"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="18dp"
+        android:minHeight="92dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_lab_sq_icon_misc">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings_miscs"
+                android:tint="@color/lab_icon_tint_misc"
+                android:contentDescription="@null" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/misc_title"
+                android:textColor="@color/lab_text_misc"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/summary_misc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/lab_misc_desc"
+                android:textColor="@color/lab_text_misc"
+                android:alpha="0.78"
+                android:textSize="11.5sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Dynamic PIF / Keybox Status Badge -->
+        <TextView
+            android:id="@+id/lab_pif_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_lab_chip_pif"
+            android:text="@string/lab_chip_pif"
+            android:textColor="@color/lab_chip_pif_text"
+            android:textSize="11.5sp"
+            android:textStyle="bold"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+    </LinearLayout>
+
+    <!-- ROW 5: Card 8 - Wide Featured Card for Superior Team -->
+    <LinearLayout
+        android:id="@+id/card_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_lab_card_team"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="18dp"
+        android:minHeight="82dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_lab_sq_icon_team">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings_team"
+                android:tint="@color/lab_icon_tint_team"
+                android:contentDescription="@null" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_title"
+                android:textColor="@color/lab_text_team"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/lab_team_desc"
+                android:textColor="@color/lab_text_team"
+                android:alpha="0.78"
+                android:textSize="11.5sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
