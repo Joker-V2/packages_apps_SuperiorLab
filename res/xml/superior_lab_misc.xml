@@ -8,9 +8,6 @@ SPDX-License-Identifier: Apache-2.0
     android:title="@string/misc_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory
-        android:title="@string/general_category">
-
     <!-- Ignore Secure Window -->
     <com.superior.support.preferences.GlobalSettingSwitchPreference
         android:key="window_ignore_secure"
@@ -23,23 +20,4 @@ SPDX-License-Identifier: Apache-2.0
         android:title="@string/hide_screen_capture_status_title"
         android:summary="@string/hide_screen_capture_status_summary"
         android:defaultValue="false"/>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/spoofing_title">
-
-    <com.superior.lab.fragments.KeyboxDataPreference
-        android:key="keybox_data_setting"
-        android:title="@string/keybox_data_title"
-        android:summary="@string/keybox_data_summary"
-        android:defaultValue=""/>
-
-    <com.superior.lab.fragments.PifDataPreference
-        android:key="pif_data_setting"
-        android:title="@string/pif_data_title"
-        android:summary="@string/pif_data_summary"
-        android:defaultValue=""/>
-
-    </PreferenceCategory>
 </PreferenceScreen>

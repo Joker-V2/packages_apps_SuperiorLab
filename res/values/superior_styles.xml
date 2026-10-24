@@ -87,12 +87,12 @@ SPDX-License-Identifier: Apache-2.0
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="LabPifBadge">
+    <style name="LabBadge">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">8dp</item>
-        <item name="android:background">@drawable/bg_lab_chip_pif</item>
-        <item name="android:textColor">@color/lab_chip_pif_text</item>
+        <item name="android:background">@drawable/bg_lab_chip</item>
+        <item name="android:textColor">@color/lab_chip_text</item>
         <item name="android:textSize">11.5sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingStart">12dp</item>

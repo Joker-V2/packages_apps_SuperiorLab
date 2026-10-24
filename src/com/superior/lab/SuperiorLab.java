@@ -27,7 +27,6 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.View;
@@ -71,13 +70,12 @@ public class SuperiorLab extends SettingsPreferenceFragment {
     private View mCardMisc;
     private View mCardTeam;
 
-    // Live Summary Views & Spoofing Badge
+    // Live Summary Views
     private TextView mSummaryStatusbar;
     private TextView mSummaryNotifications;
     private TextView mSummaryLockscreen;
     private TextView mSummaryPowerMenu;
     private TextView mSummaryMisc;
-    private TextView mPifBadge;
 
     // 2x2 M3 Expressive Quick Toggle Tiles
     private View mToggleSecureWindow;
@@ -127,7 +125,6 @@ public class SuperiorLab extends SettingsPreferenceFragment {
         mSummaryLockscreen = pref.findViewById(R.id.summary_lockscreen);
         mSummaryPowerMenu = pref.findViewById(R.id.summary_powermenu);
         mSummaryMisc = pref.findViewById(R.id.summary_misc);
-        mPifBadge = pref.findViewById(R.id.lab_pif_badge);
 
         // Bind M3 Expressive spring physics and fragment routing to all 8 cards
         attachSpringTouch(mCardStatusbar, () ->
@@ -287,24 +284,7 @@ public class SuperiorLab extends SettingsPreferenceFragment {
                     ? R.string.lab_powermenu_live_adv_on
                     : R.string.lab_powermenu_desc);
         }
-        // 3. Sync Real-Time Spoofing Badge & Misc Subtitle
-        final String keyboxData = Settings.Secure.getString(resolver, Settings.Secure.KEYBOX_DATA);
-        final String pifData = Settings.Secure.getString(resolver, Settings.Secure.PIF_DATA);
-        final boolean hasKeybox = !TextUtils.isEmpty(keyboxData);
-        final boolean hasCustomPif = !TextUtils.isEmpty(pifData);
-
-        if (mPifBadge != null) {
-            if (hasKeybox && hasCustomPif) {
-                mPifBadge.setText(R.string.lab_chip_keybox_pif);
-            } else if (hasKeybox) {
-                mPifBadge.setText(R.string.lab_chip_keybox_only);
-            } else if (hasCustomPif) {
-                mPifBadge.setText(R.string.lab_chip_custom_pif);
-            } else {
-                mPifBadge.setText(R.string.lab_chip_pif);
-            }
-        }
-
+        // 3. Sync Misc Subtitle
         if (mSummaryMisc != null) {
             if (ignoreSecure && hideCapture) {
                 mSummaryMisc.setText(R.string.lab_misc_live_privacy_both);

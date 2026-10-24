@@ -11,10 +11,6 @@ SPDX-License-Identifier: Apache-2.0
     <color name="lab_text_primary">#ECEEF4</color>
     <color name="lab_text_secondary">#9DA4B4</color>
 
-    <!-- Solid Emerald PIF Pill with White Text -->
-    <color name="lab_chip_pif_bg">#16A34A</color>
-    <color name="lab_chip_pif_text">#FFFFFF</color>
-
     <!-- Quick Toggles Card Container (Dark Mode) -->
     <color name="lab_card_toggles_bg">#111620</color>
     <color name="lab_card_toggles_stroke">#1D2433</color>

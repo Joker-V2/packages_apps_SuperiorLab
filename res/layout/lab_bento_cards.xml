@@ -293,11 +293,6 @@ SPDX-License-Identifier: Apache-2.0
                 android:text="@string/lab_misc_desc"
                 android:textColor="@color/lab_text_misc" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/lab_pif_badge"
-            style="@style/LabPifBadge"
-            android:text="@string/lab_chip_pif" />
     </LinearLayout>
 
     <!-- ROW 5: Card 8 - Wide Featured Card for Superior Team -->
