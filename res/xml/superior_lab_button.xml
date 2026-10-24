@@ -52,12 +52,6 @@
                 android:action="com.android.settings.NAVIGATION_MODE_SETTINGS" />
          </Preference>
 
-        <lineageos.preference.SecureSettingSwitchPreference
-                android:key="sysui_nav_bar_inverse"
-                android:title="@string/navigation_bar_invert_layout_title"
-                android:summary="@string/navigation_bar_invert_layout_summary"
-                android:defaultValue="false" />
-
         <ListPreference
             android:key="navigation_back_long_press"
             android:dialogTitle="@string/navigation_bar_back_long_press_title"
